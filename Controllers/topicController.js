@@ -1,6 +1,6 @@
-const User = require('../models/User');
-const Topic = require('../models/Topic');
-const Message = require('../models/Message');
+const User = require('../Models/User');
+const Topic = require('../Models/Topic');
+const Message = require('../Models/Message');
 
 // Dashboard
 exports.getDashboard = async (req, res) => {

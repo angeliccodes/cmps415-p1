@@ -1,14 +1,16 @@
 require('dotenv').config();
 const express = require('express');
-const session = require('express-session'); // We imported the session tool
+const session = require('express-session'); 
 const app = express();
+const path = require('path'); 
+app.set('views', path.join(__dirname, 'Views')); 
 
 // Turn on the Singleton Database
 require('./database'); 
 
 // Import your Auth Controller
-const authController = require('./controllers/authController');
-const topicController = require('./controllers/topicController');
+const authController = require('./Controllers/authController');
+const topicController = require('./Controllers/topicController');
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
