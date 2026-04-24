@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Society Pages - The Directory</title>
+    <%- include('partials/header') %>
+</head>
+<body>
+    <main class="container">
+        
+        <h1>We heard you were looking for some tea.</h1>
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="/dashboard" role="button" class="btn-cute outline">Return to Dashboard</a>
+        </div>
+
+        <article style="background-color: #fcf9fa !important; border: 1px solid #eae0e3 !important;">
+            <h3 style="margin-bottom: 20px; font-size: 2rem;">Start some drama</h3>
+            <form action="/topics" method="POST" style="margin-bottom: 0;">
+                <input type="text" name="title" placeholder="Brewing..." required>
+                <button type="submit" style="margin-top: 10px;">Create</button>
+            </form>
+        </article>
+
+        <h2 style="margin-top: 40px; font-size: 2rem; text-align: left; border-bottom: 1px solid #f4e8ec; padding-bottom: 10px;">Trendy Topics</h2>
+        
+        <% if (topics.length === 0) { %>
+            <p style="color: #888; font-style: italic;">Join a convo or create one. Don't miss out on the gist...</p>
+        <% } else { %>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <% topics.forEach(function(topic) { %>
+                    <article style="display: flex; justify-content: space-between; align-items: center; padding: 15px 25px !important; margin: 0 !important;">
+                        
+                        <a href="/topics/<%= topic._id %>" style="font-size: 1.3rem; color: #2c1b22; text-decoration: none; font-weight: 600; flex-grow: 1; display: block;">
+                            <%= topic.title %>
+                        </a>
+                        
+                        <% if (subbedIds.includes(topic._id.toString())) { %>
+                            <a href="/topics/<%= topic._id %>" role="button" class="btn-cute" style="padding: 5px 20px; background-color: #c2185b !important; color: #ffffff !important; border: none; font-size: 0.85rem; margin-left: 15px;"></a>
+                        <% } else { %>
+                            <form action="/topics/<%= topic._id %>/subscribe" method="POST" style="margin: 0; margin-left: 15px;">
+                                <button type="submit" class="btn-cute outline" style="padding: 5px 20px; background-color: transparent !important; color: #a8004f !important; border: 1px solid #e0c8d0 !important;">Subscribe</button>
+                            </form>
+                        <% } %>
+                        
+                    </article>
+                <% }) %>
+
+            </div>
+        <% } %>
+
+    </main>
+</body>
+</html>

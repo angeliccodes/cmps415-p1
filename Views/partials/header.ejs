@@ -1,0 +1,109 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<style>
+    :root, [data-theme="light"], [data-theme="dark"] {
+        /* Deep magenta/rose palette */
+        --pico-primary: #a8004f !important; 
+        --pico-primary-background: #c2185b !important; 
+        --pico-primary-hover: #8e0045 !important;
+        --pico-primary-hover-background: #8e0045 !important;
+        --pico-primary-focus: rgba(194, 24, 91, 0.2) !important;
+        
+        /* Choice of modern font for inputs and buttons */
+        --pico-font-family: 'Montserrat', sans-serif !important;
+        --pico-border-radius: 8px !important; /* Sharp, modern corners */
+    }
+
+    body {
+        /* Soft blush/cream background */
+        background-color: #fcf9fa !important; 
+        background-image: none !important; 
+        color: #3d2b33 !important; /* Soft dark plum */
+        min-height: 100vh;
+    }
+
+    /* Magazine-Style Headings */
+    h1, h2, h3 {
+        font-family: 'Playfair Display', serif !important;
+        color: #2c1b22 !important;
+        text-shadow: none !important; /* Clean, no neon glow */
+        text-align: center;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px;
+    }
+
+    /* The Container feature */
+    .container {
+        background: #ffffff;
+        padding: 40px 50px;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(168, 0, 79, 0.06); /* Very subtle rose shadow */
+        border: 1px solid #f4e8ec;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        max-width: 800px; 
+    }
+
+    /* Lists out Topic Cards */
+    article {
+        border: 1px solid #eae0e3 !important; /* Clean, thin border */
+        border-radius: 10px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+        background: #ffffff !important;
+        padding: 25px !important;
+        margin-bottom: 25px !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    article:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(168, 0, 79, 0.08) !important;
+        border-color: #c2185b !important;
+    }
+
+    /* where the Modern Buttons are */
+    button, .btn-cute {
+        text-transform: uppercase;
+        font-weight: 600 !important;
+        letter-spacing: 1px;
+        font-size: 0.85rem !important; /* Smaller, sharper text */
+        transition: all 0.2s ease !important;
+        box-shadow: none !important;
+    }
+    
+    button:hover, .btn-cute:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 5px 15px rgba(194, 24, 91, 0.3) !important;
+    }
+
+    /* Unsubscribe button styling */
+    .btn-unsubscribe {
+        background-color: transparent !important;
+        border: 1px solid #e0c8d0 !important;
+        color: #8e0045 !important;
+        padding: 5px 15px !important;
+        font-size: 0.75rem !important;
+    }
+    .btn-unsubscribe:hover {
+        background-color: #f4e8ec !important;
+        border-color: #c2185b !important;
+    }
+
+    /* Links styling */
+    a { color: #a8004f !important; font-weight: 500; text-decoration: none !important; transition: opacity 0.2s; }
+    a:hover { opacity: 0.7; text-shadow: none; }
+    
+    /* Clean inputs */
+    input, textarea {
+        border-color: #e0c8d0 !important;
+        background-color: #fcf9fa !important;
+    }
+    input:focus, textarea:focus {
+        background-color: #ffffff !important;
+    }
+</style>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apply - The Directory</title>
+    <%- include('partials/header') %>
+</head>
+<body>
+    <main class="container" style="max-width: 500px;">
+        
+        <h1 style="font-size: 2.5rem; font-style: italic;">Join the party, register</h1>
+        
+        <form action="/register" method="POST">
+            <div>
+                <label for="username" style="font-weight: 600; font-size: 0.9rem;">USERNAME</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div>
+                <label for="password" style="font-weight: 600; font-size: 0.9rem;">PASSWORD</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" style="margin-top: 15px;">Register</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 20px; font-size: 0.9rem;">
+            Already plugged in? <a href="/login">Sign In.</a>
+        </p>
+        
+    </main>
+</body>
+</html>

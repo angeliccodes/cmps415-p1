@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analytics - The Directory</title>
+    <%- include('partials/header') %>
+</head>
+<body>
+    <main class="container">
+        
+        <h1>Analytics.</h1>
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="/login" role="button" class="btn-cute outline">Return to Sign In</a>
+        </div>
+
+        <article>
+            <h3 style="text-align: center; color: #2c1b22; margin-bottom: 20px; font-size: 1.5rem;">Traffic and Engagement</h3>
+            
+            <table role="grid" style="border-collapse: separate; border-spacing: 0; width: 100%; text-align: left;">
+                <thead>
+                    <tr style="background-color: #fcf9fa; color: #2c1b22;">
+                        <th style="padding: 15px; border-bottom: 2px solid #eae0e3; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Topics Title</th>
+                        <th style="padding: 15px; border-bottom: 2px solid #eae0e3; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">No. of Views</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% topics.forEach(function(topic) { %>
+                        <tr>
+                            <td style="padding: 15px; border-bottom: 1px solid #f4e8ec; color: #2c1b22; font-weight: 500;"><%= topic.title %></td>
+                            <td style="padding: 15px; border-bottom: 1px solid #f4e8ec; color: #8e0045; font-weight: 600;"><%= topic.accessCount %> views</td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </article>
+        
+    </main>
+</body>
+</html>

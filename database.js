@@ -6,7 +6,7 @@ class Database {
     }
 
     _connect() {
-        // The Singleton logic: If we are already connected, don't connect again.
+        // The Singleton logic that if we are already connected, don't connect again.
         if (mongoose.connection.readyState === 1) {
             console.log('Database already connected.');
             return;
@@ -22,6 +22,5 @@ class Database {
     }
 }
 
-// By exporting a NEW instance of the class, Node.js caches it. 
-// Any other file that asks for the database will get this exact same instance.
+
 module.exports = new Database();
