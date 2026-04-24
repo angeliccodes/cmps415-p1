@@ -12,15 +12,15 @@ class Database {
             return;
         }
 
-        mongoose.connect(process.env.MONGO_URI)
+        // Hardcoding the exact link to bypass the Render naming mismatch
+        mongoose.connect('mongodb+srv://Angiesdata:Happypuppy123@cluster0.b1ykx7n.mongodb.net/AngiesMessageApp?appName=Cluster0')
             .then(() => {
-                console.log('Successfully connected to MongoDB Database');
+                console.log('Successfully connected to the Society Pages Database');
             })
             .catch(err => {
                 console.error('Database connection error:', err);
             });
     }
 }
-
 
 module.exports = new Database();
